@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "QuickKiss";
+  src: local("QuickKiss"), url(../Resources/QuickKiss.ttf) format("truetype");
+}
+@font-face {
+  font-family: "BeautyMountain";
+  src: local("BeautyMountain"),
+    url(../Resources/BeautyMountain.ttf) format("truetype");
+}
