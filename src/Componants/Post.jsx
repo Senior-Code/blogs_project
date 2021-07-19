@@ -1,13 +1,14 @@
-import React from "react";
+import "./Post.css";
 import useSWR from "swr";
-import Loading from "./Loading";
-import "./Home.css";
 import ReactMarkdown from "react-markdown";
+import Loading from "./Loading";
 
-export default function Home() {
-  const { data: article } = useSWR("http://localhost:1337/articles");
+export default function Post(props) {
+  const { data: article } = useSWR(
+    `http://localhost:1337/articles${props.location.search}`
+  );
   return (
-    <div className="blogs-body">
+    <div>
       {article ? (
         <div>
           {article.map((articles) => {

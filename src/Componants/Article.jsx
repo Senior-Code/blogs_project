@@ -2,39 +2,33 @@ import React from "react";
 import useSWR from "swr";
 import Loading from "./Loading";
 import "./Article.css";
-import ReactMarkdown from "react-markdown";
+import { Link, Route, BrowserRouter } from "react-router-dom";
+import Post from "./Post";
 
 export default function Article() {
-  const { data } = useSWR("http://localhost:1337/articles");
+  const { data: categories } = useSWR("http://localhost:1337/categories");
   return (
-    <div className="blogs-body">
-      {data ? (
-        <div>
-          {data.map((articles) => {
-            const date = new Date(articles.updated_at);
-
-            return (
-              <div className="blogs-section" key={articles.id}>
-                <div className="title-section">
-                  <img
-                    src={`http://localhost:1337${articles.image.formats.thumbnail.url}`}
-                    alt="#"
-                  ></img>
-                  <p className="article-title">{articles.title}</p>
-                  <p className="upload-date">
-                    {articles.author.name} | {date.toUTCString()}
-                  </p>
-                </div>
-                <ReactMarkdown className="content-section" skipHtml={true}>
-                  {articles.content}
-                </ReactMarkdown>
-              </div>
-            );
-          })}
-        </div>
-      ) : (
-        <Loading />
-      )}
-    </div>
+    <BrowserRouter>
+      <div className="blogs-body">
+        {categories ? (
+          <div className="body">
+            <div className="body-tabs">
+              <Link to="/articles">All</Link>
+              {categories.map((category) => (
+                <Link
+                  key={category.id}
+                  to={`/articles?category=${category.id}`}
+                >
+                  {category.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+        ) : (
+          <Loading />
+        )}
+        <Route path="/articles" component={Post} />
+      </div>
+    </BrowserRouter>
   );
 }

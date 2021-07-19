@@ -1,47 +1,22 @@
-.header-section {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
-  background-color: #353535;
+.blogs-section {
+  padding: 80px 50px 80px 50px;
+  width: 40%;
+  background-color: #ffffff;
+  margin: 30px auto 30px auto;
+  box-shadow: 0px 1px 2px #aaaaaa;
+  border-radius: 20px;
 }
-.header-logo {
-  flex-grow: 1;
+.article-title {
+  font-size: 30px;
+  font-weight: bold;
 }
-.title {
-  margin-left: 15%;
-  display: flex;
-  font-family: "BeautyMountain";
-  font-size: 20px;
-  padding: 20px;
-  align-items: center;
+.title-section img {
+  width: 80%;
+  border-radius: 15px;
+  margin-bottom: -4px;
 }
-.title img,
-p {
-  cursor: pointer;
-}
-.app-logo {
-  height: 55px;
-  width: 55px;
-  margin-right: 20px;
-  border-radius: 50%;
-}
-.header-tab {
-  font-family: "BeautyMountain";
-  font-size: 20px;
-  display: flex;
-  flex-direction: row;
-  list-style: none;
-  margin-right: 10%;
-}
-.header-tab li {
-  margin-left: 20px;
-  margin-right: 20px;
-}
-.header-tab li:hover {
-  color: #dadada;
-  cursor: pointer;
+.content-section {
+  text-align: justify;
 }
 .body {
   padding-top: 0px;
