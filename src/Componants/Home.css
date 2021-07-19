@@ -1,0 +1,73 @@
+.header-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  background-color: #353535;
+}
+.header-logo {
+  flex-grow: 1;
+}
+.title {
+  margin-left: 15%;
+  display: flex;
+  font-family: "BeautyMountain";
+  font-size: 20px;
+  padding: 20px;
+  align-items: center;
+}
+.title img,
+p {
+  cursor: pointer;
+}
+.app-logo {
+  height: 55px;
+  width: 55px;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+.header-tab {
+  font-family: "BeautyMountain";
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin-right: 10%;
+}
+.header-tab li {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.header-tab li:hover {
+  color: #dadada;
+  cursor: pointer;
+}
+.body {
+  padding-top: 0px;
+  background-color: #ffffff;
+  justify-content: center;
+  box-shadow: 0px 1px 2px #aaaaaa;
+  align-items: center;
+  font-size: 20px;
+}
+.body-tabs {
+  margin-left: 10%;
+  margin-top: 0px;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+.body-tabs button {
+  padding: 15px 25px 15px 25px;
+  margin: 2px;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  font-family: "BeautyMountain";
+  outline: none;
+  border-radius: 5px;
+}
+.body-tabs button:hover {
+  background-color: #dadada;
+}

@@ -1,0 +1,5 @@
+@font-face {
+  font-family: "BeautyMountain";
+  src: local("BeautyMountain"),
+    url(../Resources/BeautyMountain.ttf) format("truetype");
+}
