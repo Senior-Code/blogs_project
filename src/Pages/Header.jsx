@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../Resources/logo.png";
-import "./Header.css";
-import "./Font.css";
+import "../Styles/Header.css";
+import "../Styles/Font.css";
 import { Link } from "react-router-dom";
 
 export default function Header() {
@@ -23,7 +23,7 @@ export default function Header() {
         </div>
         <ul className="header-tab">
           <li>
-            <Link to="/home">HOME</Link>
+            <Link to="/">HOME</Link>
           </li>
           <li>
             <Link to="/articles">ARTICLES</Link>

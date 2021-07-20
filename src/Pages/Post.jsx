@@ -1,4 +1,4 @@
-import "./Post.css";
+import "../Styles/Post.css";
 import useSWR from "swr";
 import ReactMarkdown from "react-markdown";
 import Loading from "./Loading";
@@ -26,9 +26,11 @@ export default function Post(props) {
                     {articles.author.name} | {date.toUTCString()}
                   </p>
                 </div>
-                <ReactMarkdown className="content-section" skipHtml={true}>
-                  {articles.content}
-                </ReactMarkdown>
+                <ReactMarkdown
+                  children={articles.content}
+                  className="content-section"
+                  renderers={articles.content}
+                />
               </div>
             );
           })}
